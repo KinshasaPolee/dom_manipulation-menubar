@@ -9,3 +9,4 @@ const topMenuEl = document.getElementById('top-menu');
 topMenuEl.style.height = '100%';
 var topMenuBgColor = getComputedStyle(document.documentElement).getPropertyValue('--top-menu-bg');
 topMenuBgColor.style.backgroundColor = topMenuBgColor;
+topMenuEl.classList.add('flex-around');
