@@ -4,3 +4,6 @@ var mainBgColor = getComputedStyle(document.documentElement).getPropertyValue('m
 mainEl.style.backgroundColor = 'var(' + mainBgColor + ')';
 mainEl.innerHTML = '<h1>DOM Manipulation</h1>';
 mainEl.classList.add('flex-ctr');
+
+const topMenuEl = document.getElementById('top-menu');
+
