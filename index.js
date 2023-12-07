@@ -19,3 +19,10 @@ var topMenuBgColor = getComputedStyle(document.documentElement).getPropertyValue
 topMenuBgColor.style.backgroundColor = topMenuBgColor;
 topMenuEl.classList.add('flex-around');
 
+menuLinks.forEach(function(link) {
+
+    var linkElement = document.createElement('a');
+    linkElement.textContent = link.text;
+    linkElement.href = link.href;
+    topMenuEl.appendChild(linkElement);
+});
