@@ -1,3 +1,11 @@
+// Menu data structure
+var menuLinks = [
+    { text: 'about', href: '/about' },
+    { text: 'catalog', href: '/catalog' },
+    { text: 'orders', href: '/orders' },
+    { text: 'account', href: '/account' },
+];
+
 import "./styles.css";
 const mainEl = document.querySelector('main');
 var mainBgColor = getComputedStyle(document.documentElement).getPropertyValue('main-bg');
@@ -10,3 +18,4 @@ topMenuEl.style.height = '100%';
 var topMenuBgColor = getComputedStyle(document.documentElement).getPropertyValue('--top-menu-bg');
 topMenuBgColor.style.backgroundColor = topMenuBgColor;
 topMenuEl.classList.add('flex-around');
+
