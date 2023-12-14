@@ -1,7 +1,6 @@
-// works without mainEL-this is step 1 of part 1
-// let mainEl = document.getElementByTagName('main');
+let mainEl = document.querySelector('main');
 let topMenuEl = document.getElementById('top-menu');
-console.log(topMenuEl);
+console.log(mainEl);
 
 var menuLinks = [
     { text: 'about', href: '/about' },
