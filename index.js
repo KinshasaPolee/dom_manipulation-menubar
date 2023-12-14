@@ -1,4 +1,4 @@
-// Menu data structure
+// Menu Links
 var menuLinks = [
     { text: 'about', href: '/about' },
     { text: 'catalog', href: '/catalog' },
@@ -6,23 +6,28 @@ var menuLinks = [
     { text: 'account', href: '/account' },
 ];
 
-// import "./styles.css";
-const mainEl = document.querySelector('main');
-var mainBgColor = getComputedStyle(document.documentElement).getPropertyValue('main-bg');
-mainEl.style.backgroundColor = 'var(' + mainBgColor + ')';
-mainEl.innerHTML = '<h1>DOM Manipulation</h1>';
-mainEl.classList.add('flex-ctr');
+for (var link of menuLinks) {
+    console.log('Link Text:', link.text);
+    console.log('Link Href:', link.href);
+}
 
-const topMenuEl = document.getElementById('top-menu');
-topMenuEl.style.height = '100%';
-var topMenuBgColor = getComputedStyle(document.documentElement).getPropertyValue('--top-menu-bg');
-topMenuBgColor.style.backgroundColor = topMenuBgColor;
-topMenuEl.classList.add('flex-around');
+let newElt = document.createElement('a');
+newElt.setAttribute('Link Href:', 'link.href');
+newElt.setAttribute('Link Text:', 'link.text');
+document.topMenuEl.appendChild(newElt);
+// End of Menu Links
+let main = document.getElementById('mainEL');
+if(main) {
+    main.classList.add('flex-ctr');
+} else {
+    console.error('Element with id "mainEl" not found.');
+}
 
-menuLinks.forEach(function(link) {
-
-    var linkElement = document.createElement('a');
-    linkElement.textContent = link.text;
-    linkElement.href = link.href;
-    topMenuEl.appendChild(linkElement);
-});
+let topMenuEl = document.getElementById('top-menu');
+if(topMenuEl) {
+    topMenuEl.style.height = '100%';
+    topMenuEl.classList.add('flex-around');
+    var backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--top-menu-bg').trim();
+} else {
+    console.error('Element with id "topMenuEl" not found.');
+}

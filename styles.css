@@ -2,8 +2,7 @@
     box-sizing: border-box;
 }
 
-  /* CSS Custom Properties */
- :root {
+:root {
     --main-bg: #4a4e4d;
     --top-menu-bg: #0e9aa7;
     --sub-menu-bg: #3da4ab;
@@ -15,7 +14,7 @@ body {
     margin: 0;
     display: grid;
     grid-template-rows: 3rem auto;
-    color: black;
+    color: white;
 }
 
 .flex-ctr {
@@ -40,4 +39,11 @@ nav a {
 
 #top-menu a:hover {
     background-color: var(--sub-menu-bg);
+}
+
+#mainEl {
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
