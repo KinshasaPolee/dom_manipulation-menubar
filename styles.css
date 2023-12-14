@@ -37,13 +37,14 @@ nav a {
     color: white;
 }
 
+#top-menu {
+    background-color: var(--top-menu-bg);
+}
+
 #top-menu a:hover {
     background-color: var(--sub-menu-bg);
 }
 
-#mainEl {
+#mainEL {
     background-color: var(--main-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

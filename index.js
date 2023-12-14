@@ -1,4 +1,8 @@
-// Menu Links
+// works without mainEL-this is step 1 of part 1
+// let mainEl = document.getElementByTagName('main');
+let topMenuEl = document.getElementById('top-menu');
+console.log(topMenuEl);
+
 var menuLinks = [
     { text: 'about', href: '/about' },
     { text: 'catalog', href: '/catalog' },
@@ -7,27 +11,25 @@ var menuLinks = [
 ];
 
 for (var link of menuLinks) {
-    console.log('Link Text:', link.text);
-    console.log('Link Href:', link.href);
+    let newElt = document.createElement('a');
+newElt.setAttribute('href', link.href);
+newElt.textContent = link.text;
+topMenuEl.appendChild(newElt);
 }
-
-let newElt = document.createElement('a');
-newElt.setAttribute('Link Href:', 'link.href');
-newElt.setAttribute('Link Text:', 'link.text');
-document.topMenuEl.appendChild(newElt);
 // End of Menu Links
-let main = document.getElementById('mainEL');
-if(main) {
-    main.classList.add('flex-ctr');
+if(mainEl) {
+    var mainBackgroundColor = getComputedStyle(document. documentElement).getPropertyValue('--main-bg');
+    mainEl.style.backgroundColor = mainBackgroundColor;
+    mainEl.innerHTML = '<h1>DOM Manipulation</h1>';
+    mainEl.classList.add('flex-ctr');
 } else {
     console.error('Element with id "mainEl" not found.');
 }
 
-let topMenuEl = document.getElementById('top-menu');
 if(topMenuEl) {
     topMenuEl.style.height = '100%';
     topMenuEl.classList.add('flex-around');
-    var backgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--top-menu-bg').trim();
+    var topBackgroundColor = getComputedStyle(document.documentElement).getPropertyValue('--top-menu-bg').trim();
 } else {
     console.error('Element with id "topMenuEl" not found.');
 }
